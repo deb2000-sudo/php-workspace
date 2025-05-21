@@ -41,6 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Get theme from cookie, default to light
 $theme = isset($_COOKIE["user_theme"]) ? $_COOKIE["user_theme"] : "light";
 $bgClass = $theme === "dark" ? "bg-gray-800 text-white" : "bg-gray-100 text-gray-800";
+
 ?>
 
 <!DOCTYPE html>

@@ -5,7 +5,7 @@ if (isset($a)) {
   echo "✅ Variable 'a' is set.<br>";
 }
 
-$b = null;
+$b;
 // False because $b is NULL
 if (isset($b)) {
   echo "✅ Variable 'b' is set.<br>";
@@ -18,7 +18,7 @@ $age = 17;
 echo ($age >= 18) ? "🧍‍♂️ You're an adult!<br>" : "👶 You're still a kid!<br>";
 
 // 🤖 Null Coalescing Operator (??): Use if variable might be undefined or null
-$username = null;
+$username = "Debashis";
 echo "Hello, " . ($username ?? "👤 Guest") . "!<br>"; // If $username is null, fallback to "Guest"
 
 

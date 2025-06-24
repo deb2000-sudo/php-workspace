@@ -25,11 +25,11 @@
         }
     </style>
 </head>
-<!-- <body class="<?php echo 'body-'.rand(1,6); ?>">
-    <h1>This is Dynamic background color</h1>
-</body> -->
-<body class="body-<?php echo rand(1,6);?>">
+<body class="<?php echo 'body-'.rand(1,6); ?>">
     <h1>This is Dynamic background color</h1>
 </body>
+<!-- <body class="body-<?php echo rand(1,6);?>">
+    <h1>This is Dynamic background color</h1>
+</body> -->
 
 </html>

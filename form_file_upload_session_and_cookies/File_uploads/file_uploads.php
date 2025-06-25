@@ -60,6 +60,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["fileToUpload"])) {
         <?php if ($successMsg): ?>
             <p class="text-green-600 font-medium mb-4 text-center"><?php echo $successMsg; ?></p>
         <?php endif; ?>
+
         <?php if ($errorMsg): ?>
             <p class="text-red-500 font-medium mb-4 text-center"><?php echo $errorMsg; ?></p>
         <?php endif; ?>

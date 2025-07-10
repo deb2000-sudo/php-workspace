@@ -20,7 +20,11 @@ if (isset($_POST['create'])) {
     
     try {
         $stmt = $pdo->prepare("INSERT INTO students (name, email, age) VALUES (:name, :email, :age)");
-        $stmt->execute(['name' => $name, 'email' => $email, 'age' => $age]);
+        // $stmt->execute(['name' => $name, 'email' => $email, 'age' => $age]);
+        $stmt->bindValue(':name', $name);
+        $stmt->bindValue(':email', $email);
+        $stmt->bindValue(':age', $age);
+        $stmt->execute();
         $message = "Student created successfully!";
     } catch (PDOException $e) {
         $message = "Error creating student: " . $e->getMessage();
@@ -59,8 +63,8 @@ if (isset($_GET['delete'])) {
         $stmt = $pdo->prepare("DELETE FROM students WHERE id = :id");
         $stmt->execute(['id' => $id]);
         $message = "Student deleted successfully!";
-        header("Location: index.php"); // Redirect to refresh the page
-        exit;
+        // header("Location: index.php"); 
+
     } catch (PDOException $e) {
         $message = "Error deleting student: " . $e->getMessage();
     }

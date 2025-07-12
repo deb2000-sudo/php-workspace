@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Logger</title>
+</head>
+<body>
+    <h1>Input Logger</h1>
+    <label for="nameInput">Enter your name: </label>
+    <input type="text" id="nameInput" name="myname" placeholder="Type your name here" value="d">
+    
+    <script>
+        const nameInput = document.getElementById('nameInput');
+        
+        nameInput.addEventListener('input', (event) => {
+            console.log(event.target)
+            console.log('Current input value:', event.target.value);
+            console.log(event.target.name);
+            console.log(event.target)
+
+        });
+    </script>
+</body>
+</html>

@@ -16,7 +16,7 @@ class Car {
 
 // Usage
 $car = new Car("Toyota");
-echo $car;
+echo $car->brand;
 $car->accelerate(50);
 
 ?>

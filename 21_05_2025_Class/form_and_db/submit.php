@@ -5,7 +5,7 @@ include 'db_connect.php';
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get form data and sanitize
-    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $name = htmlspecialchars($_POST['name'], ENT_QUOTES, 'UTF-8'); // Sanitize string
     $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
     
     // Validate inputs
@@ -28,6 +28,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->close();
     }
 }
+?>
 
+<!-- Add View Data button -->
+<a href="view.php"><button>View Data</button></a>
+
+<?php
 $conn->close();
 ?>
